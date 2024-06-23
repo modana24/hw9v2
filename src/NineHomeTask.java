@@ -36,7 +36,7 @@ public class NineHomeTask {
         int weekSpending[] = new int[]{485, 987, 3577, 2398, 62};
         int weekSum = 0;
         for (int i = 0; i < weekSpending.length; i++) {
-            weekSum = weekSpending[i];
+            weekSum += weekSpending[i];
         }
         double arrage = (double) weekSum / weekSpending.length;
         System.out.println("Средняя сумма трат за месяц составила " + arrage + " рублей");
@@ -44,13 +44,8 @@ public class NineHomeTask {
 
         //task4
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        char temp;
-        for (int i = 0; i < reverseFullName.length / 2; i++) {
-            temp = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
-            reverseFullName[reverseFullName.length - 1 - i] = temp;
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
-
-        System.out.println(Arrays.toString(reverseFullName));
     }
 }
